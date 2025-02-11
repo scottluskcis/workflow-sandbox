@@ -1,0 +1,30 @@
+name: 'Issue Details'
+
+on: 
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  process:
+    name: Run
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'test')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse Issue Body
+        id: body
+        uses: stefanbuck/github-issue-parser@v3
+
+      - run: echo $ORG
+        env:
+          ORG: ${{ steps.issue-parser.outputs.issueparser_organization }}
+  
