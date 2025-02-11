@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Parse Issue Body
-        id: body
+        id: issue-parser
         uses: stefanbuck/github-issue-parser@v3
 
       - run: echo $ORG
