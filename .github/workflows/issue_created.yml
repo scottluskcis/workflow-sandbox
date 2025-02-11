@@ -22,7 +22,7 @@ jobs:
 
       - name: Parse Issue Body
         id: issue-parser
-        uses: stefanbuck/github-issue-parser@v3.2.1
+        uses: stefanbuck/github-issue-parser@v3
 
       - name: Debug Issue Parser Outputs
         run: |
