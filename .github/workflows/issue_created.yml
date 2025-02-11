@@ -23,6 +23,8 @@ jobs:
       - name: Parse Issue Body
         id: issue-parser
         uses: stefanbuck/github-issue-parser@v3
+        with: 
+          template-path: .github/ISSUE_TEMPLATE/my_template.yml
 
       - name: Debug Issue Parser Outputs
         run: |
