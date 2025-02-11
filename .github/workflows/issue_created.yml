@@ -24,7 +24,6 @@ jobs:
         id: issue-parser
         uses: stefanbuck/github-issue-parser@v3
 
-      - run: echo $ORG
+      - run: echo $FAV_DISH
         env:
-          ORG: ${{ steps.issue-parser.outputs.issueparser_organization }}
-  
+          FAV_DISH: ${{ steps.issue-parser.outputs.issueparser_favorite_dish }}
