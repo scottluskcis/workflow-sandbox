@@ -18,3 +18,11 @@ body:
         - label: Red
         - label: Green
         - label: Blue
+
+  - type: dropdown
+    id: selected_var
+    attributes:
+      label: What variable do you want to lookup
+      options: 
+        - Foo
+        - Lorem
