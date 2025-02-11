@@ -24,6 +24,10 @@ jobs:
         id: issue-parser
         uses: stefanbuck/github-issue-parser@v3
 
+      - name: Debug Issue Parser Outputs
+        run: |
+          echo "Outputs: ${{ toJson(steps.issue-parser.outputs) }}"
+          
       - run: echo $FAV_DISH
         env:
           FAV_DISH: ${{ steps.issue-parser.outputs.issueparser_favorite_dish }}
