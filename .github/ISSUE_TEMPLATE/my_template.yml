@@ -1,3 +1,7 @@
+name: Test Form
+description: Test Form with an Action to Parse Issue
+title: Test Form
+labels: [ "test" ]
 body:
   - type: input
     id: favorite_dish
