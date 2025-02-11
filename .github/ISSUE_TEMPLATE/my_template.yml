@@ -26,3 +26,12 @@ body:
       options: 
         - Foo
         - Lorem
+    validations:
+      required: true
+
+  - type: input
+    id: secret_name
+    attributes:
+      label: What secret do you want the value for?
+    validations:
+      required: true
