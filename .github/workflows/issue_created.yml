@@ -32,8 +32,11 @@ jobs:
           
       - run: |
           echo "VAR: $VAR, VALUE: $VAR_VALUE"
+          echo "SECRET $SECRET_NAME is $SECRET_VALUE"
         env:
           FAV_DISH: ${{ steps.issue-parser.outputs.issueparser_favorite_dish }}
           VAR: ${{ steps.issue-parser.outputs.issueparser_selected_var }}
-          VAR_VALUE: ${{ vars[steps.issue-parser.outputs.issueparser_selected_var] }}
+          VAR_VALUE: ${{ vars[steps.issue-parser.outputs.issueparser_selected_var] }} 
+          SECRET_NAME: ${{ steps.issue-parser.outputs.issueparser_secret_name }}
+          SECRET_VALUE: ${{ secrets[steps.issue-parser.outputs.issueparser_secret_name] }}
 
